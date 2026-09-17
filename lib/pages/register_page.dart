@@ -118,6 +118,52 @@ class _RegisterPageState extends State<RegisterPage> {
               ),
 
               const SizedBox(height: 25),
+              
+              // Username
+              TextFormField(
+                controller: usernameController,
+                decoration: const InputDecoration(
+                  labelText: 'Username',
+                  prefixIcon: Icon(Icons.account_circle),
+                  border: OutlineInputBorder(),
+                ),
+                validator: wajibDiisi,
+              ),
+
+              const SizedBox(height: 15),
+
+              // Password
+              TextFormField(
+                controller: passwordController,
+                obscureText: isObscure,
+                decoration: InputDecoration(
+                  labelText: 'Password',
+                  prefixIcon: const Icon(Icons.lock),
+                  border: const OutlineInputBorder(),
+                  suffixIcon: IconButton(
+                    icon: Icon(
+                      isObscure
+                          ? Icons.visibility
+                          : Icons.visibility_off,
+                    ),
+                    onPressed: () {
+                      setState(() {
+                        isObscure = !isObscure;
+                      });
+                    },
+                  ),
+                ),
+                validator: (value) {
+                  if (value == null || value.isEmpty) {
+                    return 'Password wajib diisi';
+                  }
+                  if (value.length < 8) {
+                    return 'Password minimal 8 karakter';
+                  }
+                  return null;
+                },
+              ),
+              const SizedBox(height: 15),
 
               // Nama
               TextFormField(
@@ -220,7 +266,6 @@ class _RegisterPageState extends State<RegisterPage> {
               // Alamat
               TextFormField(
                 controller: alamatController,
-                maxLines: 3,
                 decoration: const InputDecoration(
                   labelText: 'Alamat',
                   prefixIcon: Icon(Icons.home),
@@ -231,53 +276,6 @@ class _RegisterPageState extends State<RegisterPage> {
               ),
 
               const SizedBox(height: 15),
-
-              // Username
-              TextFormField(
-                controller: usernameController,
-                decoration: const InputDecoration(
-                  labelText: 'Username',
-                  prefixIcon: Icon(Icons.account_circle),
-                  border: OutlineInputBorder(),
-                ),
-                validator: wajibDiisi,
-              ),
-
-              const SizedBox(height: 15),
-
-              // Password
-              TextFormField(
-                controller: passwordController,
-                obscureText: isObscure,
-                decoration: InputDecoration(
-                  labelText: 'Password',
-                  prefixIcon: const Icon(Icons.lock),
-                  border: const OutlineInputBorder(),
-                  suffixIcon: IconButton(
-                    icon: Icon(
-                      isObscure
-                          ? Icons.visibility
-                          : Icons.visibility_off,
-                    ),
-                    onPressed: () {
-                      setState(() {
-                        isObscure = !isObscure;
-                      });
-                    },
-                  ),
-                ),
-                validator: (value) {
-                  if (value == null || value.isEmpty) {
-                    return 'Password wajib diisi';
-                  }
-                  if (value.length < 8) {
-                    return 'Password minimal 8 karakter';
-                  }
-                  return null;
-                },
-              ),
-
-              const SizedBox(height: 25),
 
               // Tombol submit
               SizedBox(
