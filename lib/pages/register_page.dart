@@ -52,7 +52,7 @@ class _RegisterPageState extends State<RegisterPage> {
   // Data anggota kelompok
   final List<Mahasiswa> anggotaKelompok = [
     Mahasiswa(
-      fullname: 'Nadia Laela',
+      fullname: 'Fariq Muhammad Kajayata',
       email: '',
       nomorHp: '',
       gender: '',
@@ -62,7 +62,7 @@ class _RegisterPageState extends State<RegisterPage> {
       password: '',
     ),
     Mahasiswa(
-      fullname: 'Nama Anggota 2',
+      fullname: 'Nadia Laela Anabella Kurnia',
       email: '',
       nomorHp: '',
       gender: '',
@@ -72,7 +72,7 @@ class _RegisterPageState extends State<RegisterPage> {
       password: '',
     ),
     Mahasiswa(
-      fullname: 'Nama Anggota 3',
+      fullname: 'Muhammad Sony Budiman',
       email: '',
       nomorHp: '',
       gender: '',
@@ -82,7 +82,7 @@ class _RegisterPageState extends State<RegisterPage> {
       password: '',
     ),
     Mahasiswa(
-      fullname: 'Nama Anggota 4',
+      fullname: 'Muhammad Reyvan Ardiansyah',
       email: '',
       nomorHp: '',
       gender: '',
@@ -92,7 +92,7 @@ class _RegisterPageState extends State<RegisterPage> {
       password: '',
     ),
     Mahasiswa(
-      fullname: 'Nama Anggota 5',
+      fullname: 'Darma Abdi Negara',
       email: '',
       nomorHp: '',
       gender: '',
