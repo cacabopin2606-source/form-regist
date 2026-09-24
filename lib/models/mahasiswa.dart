@@ -1,26 +1,21 @@
-import 'package:flutter/material.dart';
+class Mahasiswa {
+  String fullname;
+  String email;
+  String nomorHp;
+  String gender;
+  String tanggalLahir;
+  String alamat;
+  String username;
+  String password;
 
-class MahasiswaPage extends StatelessWidget {
-  const MahasiswaPage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Data Mahasiswa'),
-        backgroundColor: Colors.blue,
-      ),
-      body: Column(
-        children: <Widget> [
-          Text('Data Mahasiswa Kelompok 2', style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
-          Text('Berikut adalah data mahasiswa kelompok Badak Anggora.', style: TextStyle(fontSize: 16)),
-          Text('Nadia', style: TextStyle(fontSize: 16)),
-          Text('Fariq', style: TextStyle(fontSize: 16)),
-          Text('Darma', style: TextStyle(fontSize: 16)),
-          Text('Sony', style: TextStyle(fontSize: 16)),
-          Text('Rapen', style: TextStyle(fontSize: 16)),
-        ],
-      )
-    );
-  }
+  Mahasiswa({
+    required this.fullname,
+    required this.email,
+    required this.nomorHp,
+    required this.gender,
+    required this.tanggalLahir,
+    required this.alamat,
+    required this.username,
+    required this.password,
+  });
 }
