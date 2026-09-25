@@ -49,60 +49,6 @@ class _RegisterPageState extends State<RegisterPage> {
   // Menentukan apakah data sudah disubmit
   bool isSubmitted = false;
 
-  // Data anggota kelompok
-  final List<Mahasiswa> anggotaKelompok = [
-    Mahasiswa(
-      fullname: 'Fariq Muhammad Kajayata',
-      email: '',
-      nomorHp: '',
-      gender: '',
-      tanggalLahir: '',
-      alamat: '',
-      username: '',
-      password: '',
-    ),
-    Mahasiswa(
-      fullname: 'Nadia Laela Anabella Kurnia',
-      email: '',
-      nomorHp: '',
-      gender: '',
-      tanggalLahir: '',
-      alamat: '',
-      username: '',
-      password: '',
-    ),
-    Mahasiswa(
-      fullname: 'Muhammad Sony Budiman',
-      email: '',
-      nomorHp: '',
-      gender: '',
-      tanggalLahir: '',
-      alamat: '',
-      username: '',
-      password: '',
-    ),
-    Mahasiswa(
-      fullname: 'Muhammad Reyvan Ardiansyah',
-      email: '',
-      nomorHp: '',
-      gender: '',
-      tanggalLahir: '',
-      alamat: '',
-      username: '',
-      password: '',
-    ),
-    Mahasiswa(
-      fullname: 'Darma Abdi Negara',
-      email: '',
-      nomorHp: '',
-      gender: '',
-      tanggalLahir: '',
-      alamat: '',
-      username: '',
-      password: '',
-    ),
-  ];
-
   // Memilih tanggal lahir
   Future<void> pilihTanggal() async {
     final DateTime? picked = await showDatePicker(

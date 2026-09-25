@@ -110,10 +110,17 @@ class ResultPage extends StatelessWidget {
                           anggota.fullname,
                         ),
 
-                        subtitle: Text(
-                          anggota.email.isEmpty
-                              ? 'Mahasiswa'
-                              : anggota.email,
+                        subtitle: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              anggota.email.isEmpty
+                                  ? 'Mahasiswa'
+                                  : anggota.email,
+                            ),
+                            Text(anggota.nomorHp),
+                            Text(anggota.gender),
+                          ],
                         ),
                       ),
                     );
