@@ -69,8 +69,17 @@ class ResultPage extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  subtitle: Text(
-                    mahasiswa.email,
+                  subtitle: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(mahasiswa.fullname),
+                      Text(mahasiswa.nomorHp),
+                      Text(mahasiswa.email),
+                      Text(mahasiswa.gender),
+                      Text(mahasiswa.tanggalLahir),
+                      Text(mahasiswa.alamat),
+                      Text(mahasiswa.username),
+                    ],
                   ),
                 ),
               ),
